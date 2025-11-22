@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Note</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="toolbar">
+    <button id="boldBtn" class="tool-btn"><b>B</b></button>
+    <button id="italicBtn" class="tool-btn"><i>I</i></button>
+    <button id="underlineBtn" class="tool-btn"><u>U</u></button>
+
+    <select id="fontSizeSelector" class="font-size">
+      <option value="" disabled selected>Font Size</option>
+      <option value="2">Small</option>
+      <option value="3">Normal</option>
+      <option value="4">Large</option>
+    </select>
+
+    <button id="saveButton" class="tool-btn">💾 Save</button>
+    <button id="viewNotesButton" class="tool-btn">📂 View Notes</button>
+  </div>
+
+  <div class="notebook">
+    <input type="text" class="date-box" id="dateBox" maxlength="10" readonly />
+    <div class="content" contenteditable="true"></div>
+  </div>
+
+  <div id="notesPanel" class="notes-panel hidden">
+    <h3>Saved Notes</h3>
+    <ul id="notesList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
